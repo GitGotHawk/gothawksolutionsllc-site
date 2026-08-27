@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GotHawk Solutions LLC — Capability Statement</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #fff;
+      color: #1a1a2e;
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    /* ── PAGE LAYOUT ── */
+    .page {
+      width: 8.5in;
+      min-height: 11in;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2.6in 1fr;
+      grid-template-rows: auto 1fr auto;
+    }
+
+    /* ── HEADER — full width ── */
+    .header {
+      grid-column: 1 / -1;
+      background: #0d1b3e;
+      color: #fff;
+      padding: 28px 36px 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .header-left h1 {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -0.3px;
+      color: #fff;
+    }
+
+    .header-left .tagline {
+      font-size: 12px;
+      color: #a8b5d1;
+      margin-top: 4px;
+      font-weight: 500;
+    }
+
+    .header-right {
+      text-align: right;
+      font-size: 11px;
+      color: #a8b5d1;
+      line-height: 1.7;
+    }
+
+    .header-right strong {
+      color: #fff;
+      font-weight: 600;
+    }
+
+    /* ── SIDEBAR ── */
+    .sidebar {
+      background: #f4f6fb;
+      padding: 24px 22px;
+      border-right: 1px solid #e2e6f0;
+    }
+
+    .sidebar-section {
+      margin-bottom: 22px;
+    }
+
+    .sidebar-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .sidebar-label {
+      font-size: 9px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #6b7fa3;
+      margin-bottom: 8px;
+    }
+
+    /* Registration data */
+    .reg-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 4px 0;
+      border-bottom: 1px solid #e2e6f0;
+      font-size: 11.5px;
+    }
+
+    .reg-row:last-child { border-bottom: none; }
+
+    .reg-key {
+      color: #6b7fa3;
+      font-weight: 500;
+      font-size: 10.5px;
+    }
+
+    .reg-val {
+      font-weight: 600;
+      color: #1a1a2e;
+      font-size: 11px;
+    }
+
+    /* NAICS table */
+    .naics-item {
+      padding: 5px 0;
+      border-bottom: 1px solid #e2e6f0;
+    }
+
+    .naics-item:last-child { border-bottom: none; }
+
+    .naics-code {
+      font-weight: 700;
+      color: #1a4db3;
+      font-size: 12px;
+    }
+
+    .naics-primary {
+      display: inline-block;
+      background: #1a4db3;
+      color: #fff;
+      font-size: 8px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 1px 5px;
+      border-radius: 3px;
+      margin-left: 5px;
+      vertical-align: middle;
+    }
+
+    .naics-desc {
+      font-size: 10.5px;
+      color: #4a5568;
+      margin-top: 1px;
+    }
+
+    /* Contract vehicles */
+    .vehicle-item {
+      font-size: 11px;
+      color: #4a5568;
+      padding: 3px 0;
+    }
+
+    /* Contact block */
+    .contact-block {
+      font-size: 11px;
+      color: #4a5568;
+      line-height: 1.8;
+    }
+
+    .contact-block strong {
+      color: #1a1a2e;
+      font-weight: 600;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .contact-block a {
+      color: #1a4db3;
+      text-decoration: none;
+    }
+
+    /* SB certifications */
+    .cert-badge {
+      display: inline-block;
+      background: #e8f0fe;
+      color: #1a4db3;
+      font-size: 10px;
+      font-weight: 600;
+      padding: 3px 8px;
+      border-radius: 4px;
+      margin: 2px 2px 2px 0;
+    }
+
+    /* ── MAIN CONTENT ── */
+    .main {
+      padding: 24px 28px 24px 24px;
+    }
+
+    /* Section header */
+    .section-label {
+      font-size: 9px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: #1a4db3;
+      border-bottom: 2px solid #1a4db3;
+      padding-bottom: 4px;
+      margin-bottom: 12px;
+    }
+
+    .section {
+      margin-bottom: 20px;
+    }
+
+    /* Company overview */
+    .overview-text {
+      font-size: 12px;
+      color: #2d3748;
+      line-height: 1.65;
+    }
+
+    /* Capability cards */
+    .cap-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .cap-card {
+      background: #f4f6fb;
+      border: 1px solid #e2e6f0;
+      border-left: 3px solid #1a4db3;
+      border-radius: 4px;
+      padding: 10px 12px;
+    }
+
+    .cap-title {
+      font-size: 11.5px;
+      font-weight: 700;
+      color: #1a1a2e;
+      margin-bottom: 4px;
+    }
+
+    .cap-desc {
+      font-size: 10.5px;
+      color: #4a5568;
+      line-height: 1.55;
+    }
+
+    /* Differentiators */
+    .diff-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .diff-list li {
+      font-size: 11.5px;
+      color: #2d3748;
+      padding: 4px 0 4px 14px;
+      border-bottom: 1px solid #f0f2f7;
+      position: relative;
+    }
+
+    .diff-list li:last-child { border-bottom: none; }
+
+    .diff-list li::before {
+      content: '›';
+      position: absolute;
+      left: 0;
+      color: #1a4db3;
+      font-weight: 700;
+    }
+
+    /* Past performance */
+    .pp-note {
+      font-size: 11px;
+      color: #6b7fa3;
+      font-style: italic;
+      padding: 10px 12px;
+      background: #f4f6fb;
+      border-radius: 4px;
+      border: 1px dashed #c8d0e7;
+    }
+
+    /* ── FOOTER — full width ── */
+    .footer {
+      grid-column: 1 / -1;
+      background: #0d1b3e;
+      color: #a8b5d1;
+      font-size: 10px;
+      padding: 10px 36px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer strong {
+      color: #fff;
+    }
+
+    /* ── PRINT ── */
+    @media print {
+      body { margin: 0; }
+      .page { width: 100%; min-height: 100vh; }
+      @page { size: letter; margin: 0; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-left">
+      <h1>GotHawk Solutions LLC</h1>
+      <div class="tagline">AI Governance &amp; Compliance Technology for Federal Contractors — Small, Mid-Tier, and Prime — and State Agencies</div>
+    </div>
+    <div class="header-right">
+      <strong>SAM.gov Active</strong><br>
+      CAGE: 1M4D4<br>
+      UEI: HVWAF52DXCL2<br>
+      Dillsburg, PA 17019
+    </div>
+  </header>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <div class="sidebar-section">
+      <div class="sidebar-label">Registration</div>
+      <div class="reg-row">
+        <span class="reg-key">Legal Name</span>
+        <span class="reg-val">GotHawk Solutions LLC</span>
+      </div>
+      <div class="reg-row">
+        <span class="reg-key">CAGE</span>
+        <span class="reg-val">1M4D4</span>
+      </div>
+      <div class="reg-row">
+        <span class="reg-key">UEI</span>
+        <span class="reg-val">HVWAF52DXCL2</span>
+      </div>
+      <div class="reg-row">
+        <span class="reg-key">SAM.gov</span>
+        <span class="reg-val" style="color:#2a9d5c">Active</span>
+      </div>
+      <div class="reg-row">
+        <span class="reg-key">Entity Type</span>
+        <span class="reg-val">LLC</span>
+      </div>
+      <div class="reg-row">
+        <span class="reg-key">State</span>
+        <span class="reg-val">Pennsylvania</span>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-label">NAICS Codes</div>
+      <div class="naics-item">
+        <span class="naics-code">513210</span>
+        <span class="naics-primary">Primary</span>
+        <div class="naics-desc">Software Publishers</div>
+      </div>
+      <div class="naics-item">
+        <span class="naics-code">541512</span>
+        <div class="naics-desc">Computer Systems Design Services</div>
+      </div>
+      <div class="naics-item">
+        <span class="naics-code">541511</span>
+        <div class="naics-desc">Custom Computer Programming Services</div>
+      </div>
+      <div class="naics-item">
+        <span class="naics-code">541519</span>
+        <div class="naics-desc">Other Computer Related Services</div>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-label">Business Size</div>
+      <span class="cert-badge">Small Business</span>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-label">Contract Vehicles</div>
+      <div class="vehicle-item">Open Market / Direct Award</div>
+      <div class="vehicle-item">Subcontract (Teaming Ready)</div>
+      <div class="vehicle-item">Fixed-Price SOW</div>
+      <div class="vehicle-item">T&amp;M — upon request</div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-label">Point of Contact</div>
+      <div class="contact-block">
+        <strong>Williams Hawkins III</strong>
+        717-489-9585<br>
+        williams@gothawksolutionsllc.com<br>
+        gothawksolutionsllc.com<br>
+        Dillsburg, PA 17019
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <div class="section">
+      <div class="section-label">Company Overview</div>
+      <p class="overview-text">
+        GotHawk Solutions LLC is a Pennsylvania-based small business delivering AI governance technology to federal contractors of all sizes — small businesses, mid-tier firms, and defense primes — as well as DoD program offices and state agencies. We built <strong>PromptFrame</strong> — a deterministic, air-gapped AI governance platform. <strong>Design-Time (DT)</strong>, the shipping product, scores AI system prompts deterministically across 10 governance dimensions and auto-generates the complete AI-governance evidence package for ATO preparation — the AI-system portion of the body of evidence, including machine-readable OSCAL (SSP + POA&amp;M) that feeds an OSCAL-native authorization platform. A complementary <strong>Runtime (RT)</strong> enforcement layer — designed to gate agentic tool calls inline against approved policy — is architected and in development, not yet fielded.
+      </p>
+      <p class="overview-text" style="margin-top:8px;">
+        PromptFrame is fully air-gapped: zero external API calls, FIPS 140-3 capable (Red Hat UBI 9), AES-256-GCM encryption, HMAC-SHA256 audit chain. No LLM in the DT scoring path — same input always produces same output. Deployed as a self-hosted container stack on client infrastructure — GotHawk provides signed container images only. No client data is ever transmitted to GotHawk or any third party.
+      </p>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Core Capabilities</div>
+      <div class="cap-grid">
+        <div class="cap-card">
+          <div class="cap-title">Design-Time (DT) — Governance Scoring &amp; ATO Artifact Generation</div>
+          <div class="cap-desc">Deterministic 10-dimension scoring of AI system prompts — no LLM in the path, C3PAO and 3PAO defensible. Auto-generates per engagement: SSP narratives, NIST SP 800-53 Rev 5 crosswalk, POA&amp;M (FedRAMP format), GSAR 552.239-7001 (proposed) compliance checklist, SPRS export, per-dimension remediation report, and executive summary. All artifacts SHA-256 integrity-protected with HMAC-signed audit chain. Verbatim regulatory citations from primary sources throughout.</div>
+        </div>
+        <div class="cap-card">
+          <div class="cap-title">Runtime (RT) — Inline Enforcement Gate <span style="font-size:11px;color:#8a97a8;font-weight:600">· Roadmap</span></div>
+          <div class="cap-desc">A complementary runtime enforcement layer — architected and in development, not yet fielded. It is designed to sit inline with LLM and agentic toolchains and gate tool calls against approved policy before execution, logging each decision as a cryptographically signed audit record across four categories: tool authorization, scope boundary, data exfiltration attempt, and privilege escalation. The shipping product today is Design-Time.</div>
+        </div>
+        <div class="cap-card">
+          <div class="cap-title">Shadow AI &amp; Foreign AI Detection</div>
+          <div class="cap-desc">Retrospective workspace scanner identifies installed AI tools, browser extensions, AI-related environment variables, and network log contacts with AI endpoints. Foreign-origin contacts (DeepSeek/China, Mistral/France, etc.) flagged per GSAR 552.239-7001 §(f)(2) U.S.-Controlled LLM requirement (proposed rule, Revised Clause June 17 2026). Supports Cisco ASA syslog, CLF, CEF, CSV, and DNS query log formats. HMAC-signed scan report produced as a standalone artifact.</div>
+        </div>
+        <div class="cap-card">
+          <div class="cap-title">AI Governance Advisory &amp; Teaming</div>
+          <div class="cap-desc">Fixed-scope engagements sized for small contractors through primes: OMB M-25-21 AI use-case inventory alignment, CMMC Level 2 AI governance posture review, FedRAMP Moderate AI governance gap assessment. Small contractors can engage directly — no large program required. Available as AI governance subcontractor under prime AI modernization and DoD agentic AI programs. Fixed-price SOWs available. Engagement floor: $12,500.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Regulatory Coverage</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px 16px;">
+        <div style="font-size:10.5px;color:#2d3748;padding:3px 0;border-bottom:1px solid #f0f2f7;">NIST AI RMF (NIST AI 100-1) — All four functions</div>
+        <div style="font-size:10.5px;color:#2d3748;padding:3px 0;border-bottom:1px solid #f0f2f7;">EO 14179 — Federal AI governance &amp; removing barriers to American AI leadership</div>
+        <div style="font-size:10.5px;color:#2d3748;padding:3px 0;border-bottom:1px solid #f0f2f7;">OMB M-25-21 / M-25-22 / M-26-04 — Federal AI policy</div>
+        <div style="font-size:10.5px;color:#2d3748;padding:3px 0;border-bottom:1px solid #f0f2f7;">GSAR 552.239-7001* — 16 paragraphs mapped at clause resolution</div>
+        <div style="font-size:10.5px;color:#2d3748;padding:3px 0;border-bottom:1px solid #f0f2f7;">NIST SP 800-53 Rev 5 — 10 control families (AU/AC/IA/SI/CM/CP/PL/SA/SC/MP)</div>
+        <div style="font-size:10.5px;color:#2d3748;padding:3px 0;border-bottom:1px solid #f0f2f7;">CMMC Level 2 / NIST SP 800-171 Rev 2 — 110 practices</div>
+        <div style="font-size:10.5px;color:#2d3748;padding:3px 0;">PA EO 2023-19 — Pennsylvania responsible AI</div>
+        <div style="font-size:10.5px;color:#6b7fa3;padding:3px 0;font-style:italic;">*Proposed — pending GSA finalization</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Differentiators</div>
+      <ul class="diff-list">
+        <li>Produces the design-time governance evidence federal AI deployment requires — DT scoring + ATO artifact generation + machine-readable OSCAL; a roadmap RT layer would extend coverage to the runtime portion of the lifecycle</li>
+        <li>Maps GSAR 552.239-7001 at paragraph resolution (16 paragraphs, Revised Clause June 17 2026). The clause defines an &ldquo;LLM System Integrator&rdquo; at &sect;(b) as a regulated party that sets &ldquo;system prompts, prompt templates, RAG sources, fine-tuning data, tools, plugins, agents, guardrails, filters, evaluation criteria, human-review thresholds, or output constraints&rdquo; &mdash; the exact surface PromptFrame scores. GotHawk submitted formal public comments on the proposed rule (April 3 and August 3, 2026)</li>
+        <li>Deterministic scoring — no LLM in the DT path; same input always produces same output; independently verifiable and C3PAO defensible</li>
+        <li>Air-gap native — FIPS 140-3 capable, AES-256-GCM, HMAC-SHA256 audit chain; zero external API calls; CUI-environment ready</li>
+        <li>The roadmap RT gate is designed so every decision is cryptographically signed and independently verifiable — not inferred risk scores from an AI model</li>
+      </ul>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <span><strong>GotHawk Solutions LLC</strong> · CAGE 1M4D4 · UEI HVWAF52DXCL2 · Dillsburg, PA 17019</span>
+    <span>717-489-9585 · williams@gothawksolutionsllc.com · gothawksolutionsllc.com · July 2026</span>
+  </footer>
+
+</div>
+
+</body>
+</html>
