@@ -413,7 +413,7 @@
       <div class="cap-grid">
         <div class="cap-card">
           <div class="cap-title">Design-Time (DT) — Governance Scoring &amp; ATO Artifact Generation</div>
-          <div class="cap-desc">Deterministic 10-dimension scoring of AI system prompts — no LLM in the path, C3PAO and 3PAO defensible. Auto-generates per engagement: SSP narratives, NIST SP 800-53 Rev 5 crosswalk, POA&amp;M (FedRAMP format), GSAR 552.239-7001 (proposed) compliance checklist, SPRS export, per-dimension remediation report, and executive summary. All artifacts SHA-256 integrity-protected with HMAC-signed audit chain. Verbatim regulatory citations from primary sources throughout.</div>
+          <div class="cap-desc">Deterministic 10-dimension scoring of AI system prompts — no LLM in the path, C3PAO and 3PAO defensible. Auto-generates per engagement: SSP narratives, NIST SP 800-53 Rev 5 crosswalk, POA&amp;M (FedRAMP format), GSAR 552.239-7001 (class deviation) compliance checklist, SPRS export, per-dimension remediation report, and executive summary. All artifacts SHA-256 integrity-protected with HMAC-signed audit chain. Verbatim regulatory citations from primary sources throughout.</div>
         </div>
         <div class="cap-card">
           <div class="cap-title">Runtime (RT) — Inline Enforcement Gate <span style="font-size:11px;color:#8a97a8;font-weight:600">· Roadmap</span></div>
@@ -421,7 +421,7 @@
         </div>
         <div class="cap-card">
           <div class="cap-title">Shadow AI &amp; Foreign AI Detection</div>
-          <div class="cap-desc">Retrospective workspace scanner identifies installed AI tools, browser extensions, AI-related environment variables, and network log contacts with AI endpoints. Foreign-origin contacts (DeepSeek/China, Mistral/France, etc.) flagged per GSAR 552.239-7001 §(f)(2) U.S.-control criteria (proposed rule, Revised Clause June 17 2026). Supports Cisco ASA syslog, CLF, CEF, CSV, and DNS query log formats. HMAC-signed scan report produced as a standalone artifact.</div>
+          <div class="cap-desc">Retrospective workspace scanner identifies installed AI tools, browser extensions, AI-related environment variables, and network log contacts with AI endpoints. Foreign-origin contacts (DeepSeek/China, Mistral/France, etc.) flagged per GSAR 552.239-7001 §(f)(2) U.S.-control criteria (provisional citation, pre-deviation Revised Clause; class deviation issued 2026-09-28, eff. 2026-10-19). Supports Cisco ASA syslog, CLF, CEF, CSV, and DNS query log formats. HMAC-signed scan report produced as a standalone artifact.</div>
         </div>
         <div class="cap-card">
           <div class="cap-title">AI Governance Advisory &amp; Teaming</div>
@@ -436,7 +436,7 @@
         <div style="font-size:10.5px;color:#2d3748;padding:3px 0;border-bottom:1px solid #f0f2f7;">NIST AI RMF (NIST AI 100-1) — All four functions</div>
         <div style="font-size:10.5px;color:#2d3748;padding:3px 0;border-bottom:1px solid #f0f2f7;">EO 14179 — Federal AI governance &amp; removing barriers to American AI leadership</div>
         <div style="font-size:10.5px;color:#2d3748;padding:3px 0;border-bottom:1px solid #f0f2f7;">OMB M-25-21 / M-25-22 / M-26-04 — Federal AI policy</div>
-        <div style="font-size:10.5px;color:#2d3748;padding:3px 0;border-bottom:1px solid #f0f2f7;">GSAR 552.239-7001* — 16 paragraphs mapped at clause resolution</div>
+        <div style="font-size:10.5px;color:#2d3748;padding:3px 0;border-bottom:1px solid #f0f2f7;">GSAR 552.239-7001* — class deviation eff. Oct 19 2026 (16 paragraphs mapped at pre-deviation clause resolution)</div>
         <div style="font-size:10.5px;color:#2d3748;padding:3px 0;border-bottom:1px solid #f0f2f7;">NIST SP 800-53 Rev 5 — 10 control families (AU/AC/IA/SI/CM/CP/PL/SA/SC/MP)</div>
         <div style="font-size:10.5px;color:#2d3748;padding:3px 0;border-bottom:1px solid #f0f2f7;">CMMC Level 2 / NIST SP 800-171 Rev 2 — 110 practices</div>
         <div style="font-size:10.5px;color:#2d3748;padding:3px 0;">PA EO 2023-19 — Pennsylvania responsible AI</div>
@@ -448,7 +448,7 @@
       <div class="section-label">Differentiators</div>
       <ul class="diff-list">
         <li>Produces the design-time governance evidence federal AI deployment requires — DT scoring + ATO artifact generation + machine-readable OSCAL; a roadmap RT layer would extend coverage to the runtime portion of the lifecycle</li>
-        <li>Maps GSAR 552.239-7001 at paragraph resolution (16 paragraphs, Revised Clause June 17 2026). The clause defines an &ldquo;LLM System Integrator&rdquo; at &sect;(b) as a regulated party that sets &ldquo;system prompts, prompt templates, RAG sources, fine-tuning data, tools, plugins, agents, guardrails, filters, evaluation criteria, human-review thresholds, or output constraints&rdquo; &mdash; the exact surface PromptFrame scores. GotHawk submitted formal public comments on the proposed rule (April 3 and August 3, 2026)</li>
+        <li>Maps GSAR 552.239-7001 at paragraph resolution (16 paragraphs mapped against the pre-deviation Revised Clause of June 17, 2026; GSA issued the clause as a class deviation on September 28, 2026, effective October 19, 2026, and paragraph-level mappings are provisional pending re-verification against the deviation&rsquo;s own text). The clause defines an &ldquo;LLM System Integrator&rdquo; at &sect;(b) as a regulated party that sets &ldquo;system prompts, prompt templates, RAG sources, fine-tuning data, tools, plugins, agents, guardrails, filters, evaluation criteria, human-review thresholds, or output constraints&rdquo; &mdash; the exact surface PromptFrame scores. GotHawk submitted formal public comments on the proposed rule (April 3 and August 3, 2026)</li>
         <li>Deterministic scoring — no LLM in the DT path; same input always produces same output; independently verifiable and C3PAO defensible</li>
         <li>Air-gap native — FIPS 140-3 capable, AES-256-GCM, HMAC-SHA256 audit chain; zero external API calls; CUI-environment ready</li>
         <li>The roadmap RT gate is designed so every decision is cryptographically signed and independently verifiable — not inferred risk scores from an AI model</li>
